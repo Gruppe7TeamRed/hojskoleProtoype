@@ -1,5 +1,7 @@
 ---
 import Navigation from "../components/navigation.astro";
+import Card from "../components/card.astro";
+import "../css/main.css";
 ---
 
 <Navigation />
@@ -20,12 +22,32 @@ import Navigation from "../components/navigation.astro";
         <img id="/" src="/" alt="portrait" />
       </div>
     </main>
-    <section>
+    <section id="Eventyr">
         <h2>vælg dit eventyr</h2>
         <p>
            HOJSKOLENDK er en dansk højskole for unge i alderen 18-26 år.<br />
            Vi brænder for oplevelser, fællesskabet og det gode eventyr.
         </p>
+
+		<div style="display: flex; gap: 20px;">
+  <Card
+    image="/images/bali.jpg"
+    title="Bali Adventure"
+  />
+
+  <Card
+    image="/images/japan.jpg"
+    title="Japan Explorer"
+    duration="30 dage"
+  />
+  
+  <Card
+    image="/images/USA.jpg"
+    title="USA Adventure"
+    duration="30 dage"
+  />
+
+</div>
     </section>
 	</body>
 </html>
