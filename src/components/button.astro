@@ -1,0 +1,47 @@
+---
+const { title, variant } = Astro.props;
+---
+<button class={variant}>{title}</button>
+
+<style>
+    button{
+        padding: 1rem;
+        border: none;
+        font-weight: 600;
+        border-radius: 5px;
+    }
+
+    .primary {
+          padding: 1rem 1.5rem;
+        border: none;
+        background-color: rgba(206, 85, 1, 1);
+        color: white;
+        font-weight: 600;
+        border-radius: 2px;  
+       margin-left: 10em;
+       margin-top: -1em;
+    }
+
+    .secondary {
+          padding: 1rem 1.5rem;
+        border: none;
+        background-color: rgba(206, 85, 1, 1);
+        color: white;
+        font-weight: 600;
+        border-radius: 2px;  
+       margin-top: -1em;
+       margin-right: 2em;
+    }
+
+    .tredje {
+      padding: 1rem 1.5rem;
+        background-color: white;
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+        border-radius: 2px;  
+       margin-top: -1em;
+       border: 1px solid black;
+    }
+
+    
+</style>
