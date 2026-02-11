@@ -1,6 +1,8 @@
 ---
 import Navigation from "../components/navigation.astro";
 import Button from "../components/button.astro";
+import Card from "../components/card.astro";
+import "../css/main.css";	
 ---
 
 <Navigation />
@@ -14,20 +16,46 @@ import Button from "../components/button.astro";
 		<title>Astro</title>
 	</head>
 	<body>
-		<main>
-      <img class="hero-bg" src="/" alt="hero background" />
-      <div class="main-intro">
-        <img id="/" src="/" alt="portrait" />
-      </div>
-    </main>
-    <section>
-        <h2>vælg dit eventyr</h2>
-        <p>
-           HOJSKOLENDK er en dansk højskole for unge i alderen 18-26 år.<br />
-           Vi brænder for oplevelser, fællesskabet og det gode eventyr.
-        </p>
-        <Button title="Se rejsekalender" variant="secondary" />
-        <Button title="Infomoeder" variant="tredje" />
+	<main class="hero">
+  <img class="hero-bg" src="/images/heroGroup.jpg" alt="Hero background" />
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Dit højskoleeventyr starter her</h1>
+
+    <p>
+      HOJSKOLENDK er en dansk højskole for unge i alderen 18-26 år.
+      Vi brænder for oplevelser, fællesskabet og det gode eventyr.
+    </p>
+
+    <div class="hero-buttons">
+      <Button title="Se rejsekalender" variant="secondary" />
+      <Button title="Infomøder" variant="tredje" />
+    </div>
+  </div>
+</main>
+
+    <section class="events">
+  <div class="events-header">
+    <h2>Vælg dit eventyr</h2>
+    <p>
+      HOJSKOLENDK er en dansk højskole for unge i alderen 18-26 år.
+      Vi brænder for oplevelser, fællesskabet og det gode eventyr.
+    </p>
+  </div>
+
+		<div class="card-container">
+  <Card image="/images/hojskoleophold.jpg" title="Højskoleophold" />
+  <Card image="/images/sommerhojskole.jpg" title="Sommerhøjskole" />
+  <Card image="/images/hojskoleophold.jpg" title="Højskoleophold" />
+  <Card image="/images/sommerhojskole.jpg" title="Sommerhøjskole" />
+  <Card image="/images/hojskoleophold.jpg" title="Højskoleophold" />
+</div>
+
+<div class="events-button">
+  <Button title="Se alle rejser" variant="primary" />
+</div>
+ 
     </section>
 	</body>
 </html>
