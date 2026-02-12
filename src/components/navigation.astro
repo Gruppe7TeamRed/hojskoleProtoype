@@ -19,21 +19,23 @@ import Button from "../components/button.astro";
     </a>
 
     <!-- Navigation -->
-    <nav class="nav" aria-label="Hovednavigation">
-      <ul class="nav__list">
-        {links.map((link) => (
-          <li>
-            <a href={link.href} class="nav__link">
-              {link.label}
-            </a>
-          </li>
-        ))}
-        <Button title="Bestil ophold" variant="primary" />
-      </ul>
+    <nav>
+  <ul class="nav__list">
 
-      
-    </nav>
+    <li><a href="#">Rejsekalender</a></li>
+    <li><a href="#">Højskoleophold</a></li>
+    <li><a href="#">Sommerhøjskole</a></li>
+    <li><a href="#">Priser</a></li>
+    <li><a href="#">Om os</a></li>
+    <li><a href="#">Kontakt os</a></li>
 
+    <!-- Knappen som sidste element -->
+    <li>
+      <Button title="Bestil ophold" variant="primary" />
+    </li>
+
+  </ul>
+</nav>
   </div>
 </header>
 
