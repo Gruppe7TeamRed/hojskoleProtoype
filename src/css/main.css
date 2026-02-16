@@ -5,6 +5,24 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: DelaGothicOne;
+  src: url("public/fonts/DelaGothicOne-Regular.ttf");
+}
+
+h1,
+h2,
+h3,
+p,
+.logo {
+  font-family: DelaGothicOne, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
