@@ -7,15 +7,17 @@ interface Props {
 }
 
 const {image, title, poptext, subtitle} = Astro.props;
-
+import Button from "../components/button.astro";
 ---
 
 <div class="card">
   <img src={image} alt={title} />
-
   <div class="overlay"></div>
-
+  <div class="badge">
+    <Button title="90 dage" variant="primary"/>
+  </div>
   <div class="content">
+    
     {poptext && <p class="popup"> {poptext}</p>}
     <h3>{title}</h3>
     <p>{subtitle}</p>
@@ -23,6 +25,13 @@ const {image, title, poptext, subtitle} = Astro.props;
 </div>
 
 <style>
+
+  .badge {
+  position: absolute;
+  top: 20px;
+  left: -120px;
+  z-index: 10;x
+}
 .card {
   position: relative;
   width: 320px;
