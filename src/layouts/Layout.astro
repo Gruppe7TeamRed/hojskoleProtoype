@@ -1,6 +1,65 @@
 ---
-import "../css/main.css";
+import Navigation from "../components/navigation.astro";
 import Button from "../components/button.astro";
+import Card from "../components/card.astro";
+import Header from "../components/header.astro";
+import "../css/main.css";	
+
 ---
 
-<Button />
+
+<html lang="da">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+<Header />	
+	<Navigation />
+	<main class="hero">
+  <img class="hero-bg" src="/images/heroGroup.jpg" alt="Hero background" />
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Dit højskoleeventyr starter her</h1>
+
+    <p>
+      HOJSKOLENDK er en dansk højskole for unge i alderen 18-26 år.
+      Vi brænder for oplevelser, fællesskabet og det gode eventyr.
+    </p>
+
+    <div class="hero-buttons">
+      <Button title="Se rejsekalender" variant="secondary" />
+      <Button title="Infomøder" variant="tredje" />
+    </div>
+  </div>
+</main>
+
+    <section class="events">
+  <div class="events-header">
+    <h2>Vælg dit eventyr</h2>
+    <p>
+      HOJSKOLENDK er en dansk højskole for unge i alderen 18-26 år.
+      Vi brænder for oplevelser, fællesskabet og det gode eventyr.
+    </p>
+  </div>
+
+		<div class="card-container">
+  <Card image="../images/drink.jpeg" poptext="2 ledige" title="Højskoleophold" />
+  <Card image="../images/hygge.jpeg" poptext="2 ledige" title="Sommerhøjskole" />
+  <Card image="../images/regnskov.jpeg" poptext="2 ledige" title="Højskoleophold" />
+  <Card image="../images/solnedgang.jpg" poptext="2 ledige" title="Sommerhøjskole" />
+  <Card image="../images/strand.jpeg" poptext="2 ledige" title="Højskoleophold" />
+</div>
+
+<div class="events-button">
+  <Button title="Se alle rejser" variant="primary" />
+</div>
+    </section>
+   
+	</body>
+</html>
