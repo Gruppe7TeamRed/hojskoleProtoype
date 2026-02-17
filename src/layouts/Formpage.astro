@@ -1,0 +1,93 @@
+---
+import Navigation from "../components/navigation.astro";
+import Button from "../components/button.astro";
+import Card from "../components/card.astro";
+import Header from "../components/header.astro";
+import "../css/main.css";	
+import "../css/form.css";
+
+---
+
+
+<html lang="da">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+<Header />	
+	<Navigation />
+	
+<section class="Infomøde">
+
+  <div class="Infomøde-text">
+    <h1>Kom på højskole i udlandet</h1>
+
+    <h2>Tilmeld dig vores infomøde</h2>
+
+    <p>
+      Drømmer du om eventyr, naturoplevelser, kulturmøder og stærkt fællesskab?
+      Så kom med til vores online infomøde.
+    </p>
+
+    <p>
+      Vi glæder os til at se dig!
+    </p>
+  </div>
+
+  <div class="Form">
+
+    <form>
+
+      <label>Fornavn</label>
+      <input type="text" required />
+
+      <label>Efternavn</label>
+      <input type="text" required />
+
+      <label>Email</label>
+      <input type="email" required />
+
+      <label>Telefonnummer</label>
+      <input type="tel" required />
+
+      <label>Vælg infomøde</label>
+      <select required>
+        <option disabled selected>Vælg fra listen</option>
+        <option>København - 12 marts</option>
+        <option>Aarhus - 15 marts</option>
+        <option>Online - 20 marts</option>
+      </select>
+
+      <div class="Tilladelser">
+
+        <label class="checkbox">
+          <input type="checkbox" required />
+          Jeg giver samtykke til mine oplysninger må bruges
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" required />
+          Jeg accepterer vilkår og betingelser
+        </label>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="Infomøde-image">
+    <img src="/images/hygge.jpeg" alt="Infomøde" />
+  </div>
+
+</section>
+
+
+   
+	</body>
+</html>
